@@ -1,10 +1,10 @@
 from src.timeklis import vienkarss_get, vienkarss_post
-
+import pprint
 
 # 1. solis
 # vienkārši GET pieprasījumi no API, kas atgriež json formāta atbildi
-# joks = vienkarss_get("https://api.chucknorris.io/jokes/random?category=dev")
-# pprint.pprint(joks["value"])
+joks = vienkarss_get("https://api.chucknorris.io/jokes/random?category=dev")
+pprint.pprint(joks["value"])
 
 # lietotajs = vienkarss_get("https://randomuser.me/api/?nat=fi&inc=email,dob")
 # pprint.pprint(lietotajs["results"])

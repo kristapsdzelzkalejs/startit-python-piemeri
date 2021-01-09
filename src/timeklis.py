@@ -7,7 +7,7 @@ import pprint
 def vienkarss_get(url):
     r = requests.get(url)
 
-    pprint.pprint("statusa kods: ", r.status_code)
+    pprint.pprint("statusa kods: " + str(r.status_code)) 
     return r.json()
 
 
