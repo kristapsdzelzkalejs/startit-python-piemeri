@@ -2,8 +2,7 @@ from src.timeklis import apstrada_datni, apstrada_lapu
 from pprint import pprint
 import re
 
-
-# html = apstrada_datni("dati/piemers.html")
+html = apstrada_datni("dati/piemers.html")
 
 # pprint(html.head.title.text)
 # pprint(html.body.h2)
@@ -15,8 +14,11 @@ import re
 
 html = apstrada_lapu("https://www.tvnet.lv")
 pprint(html.head.title.text)
-# raksti = html.find_all('a', class_="list-article__url")
-# print(len(raksti))
-raksti = html.find_all('a', class_="list-article__url", string=re.compile("Latv"))
+raksti = html.find_all('a', class_="list-article__url")
+print(len(raksti))
+# raksti = html.find_all('a', class_="list-article__url", string=re.compile("Latv"))
 for r in raksti:
-    print(r.text)
+     print(r.text)
+
+
+

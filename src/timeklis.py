@@ -3,7 +3,7 @@ import requests
 
 
 def apstrada_datni(datne):
-    with open(datne) as fp:
+    with open(datne, encoding = 'utf-8') as fp:
         soup = BeautifulSoup(fp, 'html.parser')
     return soup
 
