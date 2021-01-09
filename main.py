@@ -1,20 +1,20 @@
-from src.timeklis import vienkarss_get, vienkarss_post
+from src.timeklis import vienkarss_get, vienkarss_post, get_ar_parametriem
 import pprint
 
 # 1. solis
 # vienkārši GET pieprasījumi no API, kas atgriež json formāta atbildi
-joks = vienkarss_get("https://api.chucknorris.io/jokes/random?category=dev")
-pprint.pprint(joks["value"])
+#joks = vienkarss_get("https://api.chucknorris.io/jokes/random?category=dev")
+#pprint.pprint(joks["value"])
 
-# lietotajs = vienkarss_get("https://randomuser.me/api/?nat=fi&inc=email,dob")
-# pprint.pprint(lietotajs["results"])
+#lietotajs = vienkarss_get("https://randomuser.me/api/?nat=fi&inc=email,dob")
+#pprint.pprint(lietotajs["results"])
 
 
 # 2.solis
 # GET, bet izmantojot parametrus, nevis pašam taisot URL
-# parami = {'nat': 'fi', 'inc': 'email,dob'}
-# lietotajs2 = get_ar_parametriem("https://randomuser.me/api/", parami)
-# pprint.pprint(lietotajs["results"])
+parami = {'nat': 'fi', 'inc': 'email,dob'}
+lietotajs2 = get_ar_parametriem("https://randomuser.me/api/", parami)
+pprint.pprint(lietotajs2["results"])
 
 # 3.solis
 # GET ar parametriem uz labu testēšanas API
